@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>grug do stuff</title>
+	<script src="https://unpkg.com/htmx.org@1.9.6"></script>
+	
+</head>
+<body>
+	<div>
+		<h1>grug do</h1>
+	
+		<ul id="todos">
+		
+		<li id="item-1"><span">eoeu</span> <button hx-delete="/todos?id=item-1" hx-swap="outerHTML" hx-target="closest li">grug did it</button></li>
+		<!-- Existing todos go here -->
+		</ul>
+
+		<form id="add-form" 
+			hx-post="/todos" 
+			hx-swap="beforeend" 
+			hx-target="#todos"
+		>
+			<label for="todo">what should grug do? </label>
+			<input type="text" name="todo" id="todo">
+			<button type="submit">add thing</button>
+		</form>
+	</div>
+</body>
+</html>
